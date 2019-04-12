@@ -1,2 +1,3 @@
-sudo sudo docker build -t craigwillis/webdav-driver -f Dockerfile .
+docker build -t craigwillis/webdav-driver -f Dockerfile .
+docker push craigwillis/webdav-driver
 
