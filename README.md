@@ -6,8 +6,8 @@ and @hategan's [CSI Driver](https://github.com/whole-tale/wt-kubernetes/tree/mas
 
 ## Setup via Kubeadm Bootstrap
 
-The `kubeadm-bootstrap` repo is used as the basis for OpenStack Kubernetes deployments.  
-For development, we setup a single Ubuntu VM via `kubeadm `. This is closer to what
+The `kubeadm-bootstrap` repo is used as the basis for some OpenStack Kubernetes deployments.  
+For development, we setup a single Ubuntu VM via `kubeadm` that is closer to what
 we would use on OpenStack than Minikube or GKE.
 
 First, provision an Ubuntu VM (Jetstream, Chameleon, Nebula...)
