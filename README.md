@@ -4,6 +4,15 @@ This is an example of a WebDav flexvolume driver based on the
 [NFS example](https://github.com/kubernetes/examples/tree/master/staging/volumes/flexvolume)
 and @hategan's [CSI Driver](https://github.com/whole-tale/wt-kubernetes/tree/master/csi-test)
 
+Highlighs:
+* WebDav flexvolume driver is a simple bash script (minimal changes from nfs example)
+* Uses anonymous WebDav, but could easily be extended to pass credentials
+* Requires `davfs` and `jq` to be installed on the host
+* Requires WebDav service IP to be used, since the host is doing the mount and can't access the Kubernetes DNS
+
+Issues:
+* Via Flexvolume, Kubernetes manages the volume mount/unmount lifecycle, but it doesn't solve the problem of needing install dependencies on the host. If we do this with GirderFS, it means ensuring that the GirderFS version on the host is kept in sync with what's needed by the system.  If GirderFS were, say, a `go` binary this would be a bit easier.
+
 ## Setup via Kubeadm Bootstrap
 
 The `kubeadm-bootstrap` repo is used as the basis for some OpenStack Kubernetes deployments.  
